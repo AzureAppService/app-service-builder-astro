@@ -1,0 +1,66 @@
+---
+import "../styles/sample.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="A simple Astro hello-world sample for App Service Builder." />
+    <title>Astro sample | App Service Builder</title>
+    <script src="/assets/health.js" is:inline defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#greeting">Skip to greeting</a>
+    <main class="sample-sheet">
+      <header>
+        <a class="builder-brand" href="/">
+          <img src="/assets/builder.svg" width="30" height="30" alt="" />
+          App Service Builder
+        </a>
+        <nav aria-label="Documentation">
+          <a href="https://docs.astro.build/">Astro documentation</a>
+          <a href="https://builder.appservice.azure.com/docs/">App Service Builder documentation</a>
+        </nav>
+      </header>
+      <!-- THESIS: A static greeting, not a dashboard.
+      OWN-WORLD: Approved daylight family, warm orange detail and generous white space.
+      STORY: Recognize Astro, read the greeting, check the published static file.
+      FIRST VIEWPORT: Official Astro wordmark above one greeting; useful guidance below.
+      FORM: Brief-pinned language-family composition; no added counters or editors. -->
+      <section class="greeting" id="greeting" aria-labelledby="hello">
+        <a class="astro-brand" href="https://astro.build/" aria-label="Astro website">
+          <img src="/assets/astro.svg" alt="Astro" width="162" height="57" />
+        </a>
+        <h1 id="hello">Hello.</h1>
+        <p class="sample-context">Astro sample for App Service Builder</p>
+        <p class="description">A page built with Astro.<br />HTML and CSS, ready to serve.</p>
+        <button type="button" data-health-check>Check static health</button>
+        <p id="health-status" role="status">Checks the published static file, not a running application server.</p>
+      </section>
+      <section class="sample-guide" aria-label="Sample guidance">
+        <p class="build-info">Astro <span>Static output</span> <code>dist/</code></p>
+        <details id="customize">
+          <summary>Customize this sample</summary>
+          <p>Edit the greeting in <code>src/pages/index.astro</code> and the styles in
+            <code>src/styles/sample.css</code> in your fork. Commit your changes, then deploy
+            the updated source through your Builder App.</p>
+        </details>
+        <details>
+          <summary>How this sample works</summary>
+          <p><code>npm run build</code> creates static files in <code>dist/</code>.
+            Builder serves them at <code>/</code>. The health button reads <code>/health</code>
+            without navigating or downloading a file. This sample does not run an Astro server,
+            collect data, or connect to an external service.</p>
+        </details>
+        <details>
+          <summary>Logo sources &amp; notices</summary>
+          <p>The unmodified <a href="https://astro.build/press/">official Astro logo</a>
+            identifies this framework and links to Astro. App Service Builder uses its supplied
+            official mark. No endorsement is implied.</p>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
